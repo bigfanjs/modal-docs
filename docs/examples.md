@@ -1,0 +1,198 @@
+---
+id: examples
+title: Examples
+sidebar_label: Examples
+---
+
+:::note
+
+Supposing you already **provided the context** and **injected the Scene** into your layout or anywhere you see it fits and also you got your **modals styles** ready, each of the following examples should display a modal.
+
+:::
+
+### Log In
+
+The following example, we are using the pop up effect which is the default effect.
+
+**our modal component:**
+
+```jsx
+import React from "react";
+
+import nature from "static/icons/nature.svg";
+
+import * as styles from "./styles";
+
+export default function Login() {
+  return (
+    <styles.Login>
+      <styles.FormWrapper>
+        <styles.Form>
+          <h1>Login to bigfan Modal</h1>
+          <styles.TextInput name="email" type="text" placeholder="Your email" />
+          <styles.TextInput
+            name="password"
+            type="password"
+            placeholder="Your password"
+          />
+          <styles.SubmitButton type="submit" />
+        </styles.Form>
+      </styles.FormWrapper>
+      <styles.Illustration src={nature} />
+    </styles.Login>
+  );
+}
+```
+
+**login button:**
+
+```jsx
+import React from "react";
+import { useModal } from "@bigfan/modal";
+
+export default function LoginButton() {
+  const {
+    openModal,
+    types: { LOGIN },
+  } = useModal();
+
+  return (
+    <button
+      onClick={() => openModal(LOGIN)}
+      className="button button--warning button--md"
+    >
+      Log in
+    </button>
+  );
+}
+```
+
+<button className="button button--warning button--lg">Log in</button>
+
+### Sign Up
+
+In the following example we are using the fade in/out effect.
+
+**Our sign up modal:**
+
+```jsx
+import React from "react";
+
+import street from "static/icons/street.svg";
+
+import * as styles from "./styles";
+
+export default function SignUp() {
+  return (
+    <styles.SignUp>
+      <styles.FormWrapper>
+        <styles.Form>
+          <h1>SignUp to bigfan Modal</h1>
+          <styles.TextInput name="email" type="text" placeholder="Your email" />
+          <styles.TextInput
+            name="password"
+            type="password"
+            placeholder="Your password"
+          />
+          <styles.SubmitButton type="submit" />
+        </styles.Form>
+      </styles.FormWrapper>
+      <styles.Illustration src={street} />
+    </styles.SignUp>
+  );
+}
+```
+
+**In the sign up button:**
+
+```jsx
+import React from "react";
+import { useModal } from "@bigfan/modal";
+
+export default function SignUpButton() {
+  const {
+    openModal,
+    types: { SIGN_UP },
+  } = useModal();
+
+  return (
+    <button
+      onClick={() => openModal(SIGN_UP)}
+      className="button button--warning button--md"
+    >
+      Sign up
+    </button>
+  );
+}
+```
+
+<button className="button button--warning button--lg">Sign up</button>
+
+### Notification
+
+The following example, we are using the slide left effect with timeout set to **5 seconds**. Meaning that it will **close automaticaly** after the given timeout, and the timer is reseted when hovering over the notification modal.
+
+**Our notification modal:**
+
+```jsx
+import React from "react";
+import { useModal } from "@bigfan/modal";
+
+import smiley from "static/icons/smiley.svg";
+import x from "static/icons/x.svg";
+
+import * as styles from "./styles";
+
+export default function AddToCart() {
+  const { closeModal } = useModal();
+
+  return (
+    <styles.AddToCart style={{ position: "absolute" }}>
+      <styles.Head>
+        <styles.XIcon src={x} alt="close" onClick={closeModal} />
+      </styles.Head>
+      <styles.SmileyFace src={smiley} alt="smiley" />
+      <styles.SuccessTitle>success</styles.SuccessTitle>
+      <styles.SuccessSubTitle>
+        hey there, your post was successfully created.
+      </styles.SuccessSubTitle>
+      <styles.Bar>
+        <styles.Tag>successfull</styles.Tag>
+      </styles.Bar>
+    </styles.AddToCart>
+  );
+}
+```
+
+**In the notification button:**
+
+```jsx
+import React from "react";
+import { useModal } from "@bigfan/modal";
+
+export default function NotificationButton() {
+  const {
+    openModal,
+    types: { NOTIFICATION },
+    effects: { SLIDE_LEFT },
+  } = useModal();
+
+  return (
+    <button
+      onClick={() =>
+        openModal(NOTIFICATION, {
+          effect: SLIDE_LEFT,
+          timeout: 5000,
+          noOverlay: true,
+          spring: true,
+        })
+      }
+      className="button button--warning button--lg"
+    >
+      Show notification
+    </button>
+  );
+}
+```
+
+<button className="button button--warning button--lg">Show notification</button>

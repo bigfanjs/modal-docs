@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Docusaurus: ["doc1", "doc2", "doc3", "getting-started"],
-    Features: ["mdx"],
+    "Getting Started": ["installation", "examples", "styling"],
+    API: ["provider", "modal", "scene", "useModal"],
   },
 };

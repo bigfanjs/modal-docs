@@ -1,7 +1,7 @@
 ---
-id: getting-started
-title: Getting Started
-sidebar_label: Getting Started
+id: installation
+title: Instalation &  setup
+sidebar_label: Instalation &  setup
 slug: /
 ---
 
