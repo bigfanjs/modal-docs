@@ -31,7 +31,7 @@ const features = [
     description: (
       <>
         ability to automaticaly close modals and to open any modal from anywhere
-        in your code
+        throughout your app.
       </>
     ),
   },
@@ -41,7 +41,7 @@ const features = [
     description: (
       <>
         scalable, loosely coupled, and easily maintainable modal library that
-        saves you time and energy when have many modals.
+        saves you time and energy when having many modals.
       </>
     ),
   },
@@ -54,7 +54,7 @@ const features = [
     title: "Custimizable",
     imageUrl: "img/customize.svg",
     description: (
-      <>the freedom to add custom effects and add customize modals.</>
+      <>the freedom to add custom effects, customize modals and much more.</>
     ),
   },
 ];
