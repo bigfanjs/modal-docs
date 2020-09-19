@@ -2,8 +2,8 @@ module.exports = {
   title: "Bigfan Modal",
   tagline:
     "Put all your modals in one place and prevent polluting the DOM with excessive nodes.",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://bifanjs.github.io",
+  baseUrl: "/modal-docs/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
   organizationName: "bigfanjs",

@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
-    "@bigfan/modal": "^1.0.0",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@bigfan/modal": "1.6.1",
     "@docusaurus/core": "2.0.0-alpha.64",
     "@docusaurus/preset-classic": "2.0.0-alpha.64",
     "@mdx-js/react": "^1.5.8",
