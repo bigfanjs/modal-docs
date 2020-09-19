@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
     "Getting Started": ["installation", "examples", "styling"],
-    API: ["provider", "modal", "scene", "useModal"],
+    API: ["useModal", "provider", "modal", "scene"],
   },
 };

@@ -12,10 +12,12 @@ import styles from "./styles.module.css";
 let timeout;
 
 const effects = [
-  "FADE OUT",
+  "FADE",
   "POP UP",
   "SLIDE LEFT",
   "SLIDE RIGHT",
+  "SLIDE UP",
+  "SLIDE DOWN",
   "HORIZONTAL FLIP",
   "VERTICALE FLIP",
   "ROTATE",

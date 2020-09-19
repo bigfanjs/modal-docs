@@ -86,6 +86,8 @@ types of effects avaliable
 | FADE          |
 | SLIDE_LEFT    |
 | SLIDE_RIGHT   |
+| SLIDE_UP      |
+| SLIDE_DOWN    |
 | FLIP_X        |
 | FLIP_Y        |
 | ROTATE        |
