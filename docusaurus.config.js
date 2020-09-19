@@ -7,7 +7,7 @@ module.exports = {
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
   organizationName: "bigfanjs",
-  projectName: "modal",
+  projectName: "modal-docs",
   themeConfig: {
     navbar: {
       title: "bigfan modal",

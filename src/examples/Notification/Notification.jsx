@@ -5,6 +5,7 @@
 */
 
 import React from "react";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import { Provider, Scene, useModal } from "@bigfan/modal";
 
 import * as styles from "./styles";
@@ -16,12 +17,12 @@ function NotificationForm() {
     <styles.NotificationForm style={{ position: "absolute" }}>
       <styles.Head>
         <styles.XIcon
-          src="/static/img/x.svg"
+          src={useBaseUrl("img/x.svg")}
           alt="close"
           onClick={closeModal}
         />
       </styles.Head>
-      <styles.SmileyFace src="/static/img/smiley.svg" alt="smiley" />
+      <styles.SmileyFace src={useBaseUrl("img/smiley.svg")} alt="smiley" />
       <styles.SuccessTitle>success</styles.SuccessTitle>
       <styles.SuccessSubTitle>
         hey there, your post was successfully created.

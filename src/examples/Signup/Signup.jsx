@@ -5,6 +5,7 @@
 */
 
 import React from "react";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import { Provider, Scene, useModal } from "@bigfan/modal";
 
 import * as styles from "./styles";
@@ -24,7 +25,7 @@ function SignUpForm() {
           <styles.SubmitButton type="submit" />
         </styles.Form>
       </styles.FormWrapper>
-      <styles.Illustration src="/static/img/street.svg" />
+      <styles.Illustration src={useBaseUrl("img/street.svg")} />
     </styles.SignUp>
   );
 }
