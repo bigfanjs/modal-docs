@@ -17,6 +17,10 @@
   --modal-effects-bg-color: #0a91ab;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 html[data-theme="dark"] {
   --ifm-color-primary: red;
   --modal-feature-bg-color: #282828;

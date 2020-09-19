@@ -18,12 +18,18 @@ The type of modal you want to open
 
 ### configs
 
-| config    |                   definition                    | default |
-| --------- | :---------------------------------------------: | :-----: |
-| effect    |        the effect type you want to apply        | POP_UP  |
-| timeout   | the modal closes automaticaly after the timeout |    0    |
-| noOverlay |                 disable overlay                 |  false  |
-| spring    |              enable spring motion               |  false  |
+| config     |                             definition                              |         default         |
+| ---------- | :-----------------------------------------------------------------: | :---------------------: |
+| effect     |         the effect type you want to apply or custom effect          |         POP_UP          |
+| timeout    |           the modal closes automaticaly after the timeout           |            0            |
+| noOverlay  |                           disable overlay                           |          false          |
+| spring     |                        enable spring motion                         |          false          |
+| speed      |           how fast the modal opens and closes in seconds            | effect default duration |
+| openSpeed  |                 how fast the modal opens in seconds                 | effect default duration |
+| closeSpeed |                how fast the modal closes in seconds                 | effect default duration |
+| fade       |                 whether overlay should fade or not                  |          false          |
+| data       | anything passed to data in going to be available in the opned modal |          null           |
+| scroll     |       whether scoll is blocked after a modal is opened or not       |          false          |
 
 ```jsx
 import React from "react";
@@ -40,10 +46,12 @@ export default function Btn() {
     <button
       onClick={() =>
         openModal(NOTIFICATION, {
-          effect: SLIDE_LEFT,
-          timeout: 5000,
-          noOverlay: true,
-          spring: true,
+          effect: SLIDE_LEFT, // effect type
+          timeout: 5000, // closes after 5 seconds
+          noOverlay: true, // disabled overlay
+          spring: true, // enables spring motion
+          scroll: true, // allow scroll¸
+          data: { status: "😁" }, // passes smiley face to NOTIFICATION modal
         })
       }
     >

@@ -1,12 +1,17 @@
-import React from "react";
+/**
+  If you are reading this code, putting all of the Provider, Scene and Modal
+  in one place is just for the purpose of making it possible to show the
+  modals on mdx files.
+*/
 
-import nature from "./nature.svg";
+import React from "react";
+import { Provider, Scene, useModal } from "@bigfan/modal";
 
 import * as styles from "./styles";
 
-export default function Login({ motion }) {
+function LoginForm() {
   return (
-    <styles.Login style={motion}>
+    <styles.Login>
       <styles.FormWrapper>
         <styles.Form>
           <h1>Login to bigfan Modal</h1>
@@ -19,7 +24,35 @@ export default function Login({ motion }) {
           <styles.SubmitButton type="submit" />
         </styles.Form>
       </styles.FormWrapper>
-      <styles.Illustration src={nature} />
+      <styles.Illustration src="/static/img/nature.svg" />
     </styles.Login>
+  );
+}
+
+function LoginScene() {
+  const {
+    types: { LOGIN },
+    openModal,
+  } = useModal();
+  const modals = { [LOGIN]: LoginForm };
+
+  return (
+    <>
+      <Scene modals={modals} />
+      <button
+        className="button button--warning button--lg"
+        onClick={() => openModal(LOGIN)}
+      >
+        Log in
+      </button>
+    </>
+  );
+}
+
+export default function Login() {
+  return (
+    <Provider types={{ LOGIN: "LOGIN" }}>
+      <LoginScene />
+    </Provider>
   );
 }

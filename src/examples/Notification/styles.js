@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Modal } from "@bigfan/modal";
 
-export const AddToCart = styled(Modal)`
+export const NotificationForm = styled(Modal)`
   width: 400px;
   height: 200px;
-  box-shadow: 0px 2px 30px #c5c5c5cc;
+  box-shadow: 0px 2px 30px #414141cc;
   background-color: #fff;
   border-radius: 10px;
   top: 80px;
@@ -45,6 +45,7 @@ export const Bar = styled.div`
 export const Tag = styled.h4`
   margin: 0;
   text-transform: uppercase;
+  line-height: 40px;
 `;
 
 export const SmileyFace = styled.img`

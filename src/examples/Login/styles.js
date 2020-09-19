@@ -15,11 +15,16 @@ export const Login = styled(Modal)`
 
 export const FormWrapper = styled.div`
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const Illustration = styled.img`
   width: 50%;
   background-color: #c0eeff;
+  padding: 30px;
+  box-sizing: border-box;
 `;
 
 export const TextInput = styled.input`
@@ -40,10 +45,8 @@ export const TextInput = styled.input`
 `;
 
 export const Form = styled.form`
-  height: 100%;
   width: 100%;
   margin: 0 auto;
-  padding-top: 100px;
 
   > input {
     margin-top: 20px;

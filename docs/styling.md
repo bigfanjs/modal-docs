@@ -60,6 +60,6 @@ transform-origin: center center;
 pointer-events: auto;
 ```
 
-You won't be able to override these styles using both `CSS-in-JS` and `vanilla CSS` unless you are using the `!important` flag.
+You won't be able to override these styles using both `CSS-in-JS` and `vanilla CSS` unless you are using the `!important` flag or **overriding them using inline styles**.
 
 :::

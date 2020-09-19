@@ -4,6 +4,10 @@ title: Examples
 sidebar_label: Examples
 ---
 
+import Login from "../src/examples/Login/Login";
+import Signup from "../src/examples/Signup/Signup";
+import Notification from "../src/examples/Notification/Notification";
+
 :::note
 
 Supposing you already **provided the context** and **injected the Scene** into your layout or anywhere you see it fits and also you got your **modals styles** ready, each of the following examples should display a modal.
@@ -67,11 +71,11 @@ export default function LoginButton() {
 }
 ```
 
-<button className="button button--warning button--lg">Log in</button>
+<Login />
 
 ### Sign Up
 
-In the following example we are using the fade in/out effect.
+In the following example we are using the horizontal fliping (**FLIP_X**) effect.
 
 **Our sign up modal:**
 
@@ -126,11 +130,11 @@ export default function SignUpButton() {
 }
 ```
 
-<button className="button button--warning button--lg">Sign up</button>
+<Signup />
 
 ### Notification
 
-The following example, we are using the slide left effect with timeout set to **5 seconds**. Meaning that it will **close automaticaly** after the given timeout, and the timer is reseted when hovering over the notification modal.
+The following example, we are using the slide left effect with timeout set to **5 seconds**. Meaning that it will **close automaticaly** after the given timeout, and the timer is reseted when hovering over the notification modal. And also we are telling the modal to **allow body scroll**.
 
 **Our notification modal:**
 
@@ -143,7 +147,7 @@ import x from "static/icons/x.svg";
 
 import * as styles from "./styles";
 
-export default function AddToCart() {
+export default function Notification() {
   const { closeModal } = useModal();
 
   return (
@@ -185,6 +189,7 @@ export default function NotificationButton() {
           timeout: 5000,
           noOverlay: true,
           spring: true,
+          scroll: true,
         })
       }
       className="button button--warning button--lg"
@@ -195,4 +200,4 @@ export default function NotificationButton() {
 }
 ```
 
-<button className="button button--warning button--lg">Show notification</button>
+<Notification />
