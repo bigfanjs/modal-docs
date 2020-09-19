@@ -51,7 +51,7 @@ const features = [
     description: <>Comes with 10+ modal effects plus an animated overlay </>,
   },
   {
-    title: "Custimizable",
+    title: "Customizable",
     imageUrl: "img/customize.svg",
     description: (
       <>the freedom to add custom effects, customize modals and much more.</>
