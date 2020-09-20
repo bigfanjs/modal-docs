@@ -4,7 +4,7 @@ title: Modal
 sidebar_label: Modal
 ---
 
-The `<Modal>` component is essiantial for your modals to work as it encapsulates all the behaviors and it allows you to customize your modals.
+The `<Modal>` component is essential for your modals to work as it encapsulates all the behaviors and it allows you to customize your modals.
 
 _your awesome login modal:_
 

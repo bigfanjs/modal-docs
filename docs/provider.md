@@ -4,7 +4,7 @@ title: Provider
 sidebar_label: Provider
 ---
 
-Any component anywhere beneath the provider is able to minupilate the modal scene.
+Any component anywhere beneath the provider is able to manipulate the modal scene.
 
 ```jsx
 import React from "react";

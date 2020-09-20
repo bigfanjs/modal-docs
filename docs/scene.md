@@ -4,7 +4,7 @@ title: Scene
 sidebar_label: Scene
 ---
 
-The **Scene** component is the place where you want to display your open modals. It can only display a single modal. It has the ability to proform animations on both _open_ and _close_ states.
+The **Scene** component is the place where you want to display your open modals. It can only display a single modal. It has the ability to perform animations on both _open_ and _close_ states.
 
 ## Props
 

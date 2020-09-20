@@ -4,7 +4,7 @@ title: useModal
 sidebar_label: useModal
 ---
 
-`useModal` is a custom react hook that gives you access to the modal context that allows you to apporate on your scene. And when called it returns the following props:
+`useModal` is a custom react hook that gives you access to the modal context that allows you to operate on your scene. And when called it returns the following props:
 
 `openModal`, `closeModal`, `effects`, `types`
 
