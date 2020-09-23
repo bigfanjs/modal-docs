@@ -4,25 +4,25 @@
   modals on mdx files.
 */
 
-import React from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Provider, Scene, useModal } from "@bigfan/modal";
+import React from 'react'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Provider, Scene, useModal } from '@bigfan/modal'
 
-import * as styles from "./styles";
+import * as styles from './styles'
 
-function NotificationForm() {
-  const { closeModal } = useModal();
+function NotificationForm () {
+  const { closeModal } = useModal()
 
   return (
-    <styles.NotificationForm style={{ position: "absolute" }}>
+    <styles.NotificationForm style={{ position: 'absolute' }}>
       <styles.Head>
         <styles.XIcon
-          src={useBaseUrl("img/x.svg")}
-          alt="close"
+          src={useBaseUrl('img/x.svg')}
+          alt='close'
           onClick={closeModal}
         />
       </styles.Head>
-      <styles.SmileyFace src={useBaseUrl("img/smiley.svg")} alt="smiley" />
+      <styles.SmileyFace src={useBaseUrl('img/smiley.svg')} alt='smiley' />
       <styles.SuccessTitle>success</styles.SuccessTitle>
       <styles.SuccessSubTitle>
         hey there, your post was successfully created.
@@ -31,42 +31,42 @@ function NotificationForm() {
         <styles.Tag>successfull</styles.Tag>
       </styles.Bar>
     </styles.NotificationForm>
-  );
+  )
 }
 
-function NotificationScene() {
+function NotificationScene () {
   const {
     types: { NOTIFICATION },
     effects: { SLIDE_LEFT },
-    openModal,
-  } = useModal();
-  const modals = { [NOTIFICATION]: NotificationForm };
+    openModal
+  } = useModal()
+  const modals = { [NOTIFICATION]: NotificationForm }
 
   return (
     <>
       <Scene modals={modals} />
       <button
-        className="button button--warning button--lg"
+        className='button button--warning button--lg'
         onClick={() =>
           openModal(NOTIFICATION, {
             effect: SLIDE_LEFT,
             timeout: 5000,
             noOverlay: true,
             spring: true,
-            scroll: true,
+            scroll: true
           })
         }
       >
         Show Notification
       </button>
     </>
-  );
+  )
 }
 
-export default function Notification() {
+export default function Notification () {
   return (
-    <Provider types={{ NOTIFICATION: "NOTIFICATION" }}>
+    <Provider types={{ NOTIFICATION: 'NOTIFICATION' }}>
       <NotificationScene />
     </Provider>
-  );
+  )
 }

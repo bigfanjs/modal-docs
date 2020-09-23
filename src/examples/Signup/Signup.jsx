@@ -4,57 +4,57 @@
   modals on mdx files.
 */
 
-import React from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Provider, Scene, useModal } from "@bigfan/modal";
+import React from 'react'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Provider, Scene, useModal } from '@bigfan/modal'
 
-import * as styles from "./styles";
+import * as styles from './styles'
 
-function SignUpForm() {
+function SignUpForm () {
   return (
     <styles.SignUp>
+      <styles.Illustration src={useBaseUrl('img/street.svg')} />
       <styles.FormWrapper>
         <styles.Form>
           <h1>SignUp to bigfan Modal</h1>
-          <styles.TextInput name="email" type="text" placeholder="Your email" />
+          <styles.TextInput name='email' type='text' placeholder='Your email' />
           <styles.TextInput
-            name="password"
-            type="password"
-            placeholder="Your password"
+            name='password'
+            type='password'
+            placeholder='Your password'
           />
-          <styles.SubmitButton type="submit" />
+          <styles.SubmitButton type='submit' />
         </styles.Form>
       </styles.FormWrapper>
-      <styles.Illustration src={useBaseUrl("img/street.svg")} />
     </styles.SignUp>
-  );
+  )
 }
 
-function SignupScene() {
+function SignupScene () {
   const {
     types: { SIGNUP },
     effects: { FLIP_X },
-    openModal,
-  } = useModal();
-  const modals = { [SIGNUP]: SignUpForm };
+    openModal
+  } = useModal()
+  const modals = { [SIGNUP]: SignUpForm }
 
   return (
     <>
       <Scene modals={modals} />
       <button
-        className="button button--warning button--lg"
+        className='button button--warning button--lg'
         onClick={() => openModal(SIGNUP, { effect: FLIP_X, spring: true })}
       >
         Sign up
       </button>
     </>
-  );
+  )
 }
 
-export default function Signup() {
+export default function Signup () {
   return (
-    <Provider types={{ SIGNUP: "SIGNUP" }}>
+    <Provider types={{ SIGNUP: 'SIGNUP' }}>
       <SignupScene />
     </Provider>
-  );
+  )
 }

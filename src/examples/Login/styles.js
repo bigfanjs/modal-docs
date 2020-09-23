@@ -1,31 +1,39 @@
-import styled from "styled-components";
-import { Modal } from "@bigfan/modal";
+import styled from 'styled-components'
+import { Modal } from '@bigfan/modal'
 
 export const Login = styled(Modal)`
-  width: 90%;
-  height: 70%;
+  @media screen and (max-width: 966px) {
+    width: 90%;
+  }
+  width: 500px;
+  height: auto;
   box-shadow: 0px 2px 30px #000;
   background-color: #fff;
   border-radius: 10px;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   min-height: 500px;
   overflow: hidden;
   position: absolute;
-`;
+`
 
 export const FormWrapper = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
+  padding-bottom: 10px;
+`
 
 export const Illustration = styled.img`
-  width: 50%;
+  width: auto;
+  height: 20em;
   background-color: #c0eeff;
-  padding: 30px;
+  padding: 3px;
   box-sizing: border-box;
-`;
+`
 
 export const TextInput = styled.input`
   color: #3f3d56;
@@ -42,14 +50,15 @@ export const TextInput = styled.input`
   margin: 0px;
   padding: 15px;
   outline: none;
-`;
+`
 
 export const Form = styled.form`
   width: 100%;
   margin: 0 auto;
-
+  padding-left: 10px;
+  padding-right: 10px;
   > input {
-    margin-top: 20px;
+    margin-top: 10px;
     :first-of-type {
       margin-top: 0;
     }
@@ -58,7 +67,7 @@ export const Form = styled.form`
   @media (min-width: 470px) {
     max-width: 500px;
   }
-`;
+`
 
 export const SubmitButton = styled.input`
   display: block;
@@ -79,4 +88,5 @@ export const SubmitButton = styled.input`
   appearance: none;
   border-radius: 10px;
   background-color: #f50257;
-`;
+  width: 100%;
+`

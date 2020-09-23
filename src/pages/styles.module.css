@@ -33,6 +33,7 @@
 
 .feature {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   width: 100%;
   padding: 3rem 1rem;
@@ -103,7 +104,13 @@
 .effectNamesMobile {
   display: block;
 }
-
+/* Mobile */
+@media screen and (max-width: 966px) {
+  .feature {
+    margin-left: 20px;
+    flex-wrap: wrap;
+  }
+}
 /* Tablet */
 @media (min-width: 768px) {
   .effectNamesTablet {
