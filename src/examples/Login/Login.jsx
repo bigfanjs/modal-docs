@@ -4,56 +4,56 @@
   modals on mdx files.
 */
 
-import React from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Provider, Scene, useModal } from "@bigfan/modal";
+import React from 'react'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Provider, Scene, useModal } from '@bigfan/modal'
 
-import * as styles from "./styles";
+import * as styles from './styles'
 
-function LoginForm() {
+function LoginForm () {
   return (
     <styles.Login>
+      <styles.Illustration src={useBaseUrl('img/nature.svg')} />
       <styles.FormWrapper>
         <styles.Form>
           <h1>Login to bigfan Modal</h1>
-          <styles.TextInput name="email" type="text" placeholder="Your email" />
+          <styles.TextInput name='email' type='text' placeholder='Your email' />
           <styles.TextInput
-            name="password"
-            type="password"
-            placeholder="Your password"
+            name='password'
+            type='password'
+            placeholder='Your password'
           />
-          <styles.SubmitButton type="submit" />
+          <styles.SubmitButton type='submit' />
         </styles.Form>
       </styles.FormWrapper>
-      <styles.Illustration src={useBaseUrl("img/nature.svg")} />
     </styles.Login>
-  );
+  )
 }
 
-function LoginScene() {
+function LoginScene () {
   const {
     types: { LOGIN },
-    openModal,
-  } = useModal();
-  const modals = { [LOGIN]: LoginForm };
+    openModal
+  } = useModal()
+  const modals = { [LOGIN]: LoginForm }
 
   return (
     <>
       <Scene modals={modals} />
       <button
-        className="button button--warning button--lg"
+        className='button button--warning button--lg'
         onClick={() => openModal(LOGIN)}
       >
         Log in
       </button>
     </>
-  );
+  )
 }
 
-export default function Login() {
+export default function Login () {
   return (
-    <Provider types={{ LOGIN: "LOGIN" }}>
+    <Provider types={{ LOGIN: 'LOGIN' }}>
       <LoginScene />
     </Provider>
-  );
+  )
 }
